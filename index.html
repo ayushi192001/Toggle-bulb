@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 37%;
+}
+.btn{
+    padding:25px;
+    width:10%;
+    background-color: rgb(29, 197, 141);
+}
+    </style>
+</head>
+<body style="background-color:black" >
+    <img  id="bulb" src="bulboff.jpg" alt="no" class="center">
+    <button id="toggle" class="center btn">TURN ON</button>
+
+    <script>
+        let bulb = document.getElementById('bulb')
+        let btn = document.getElementById('toggle')
+        btn.addEventListener('click',call)
+        function call(e){
+            if(btn.textContent.includes('ON')){
+                bulb.src="bulbon.jpg"
+                
+                btn.textContent="TURN OFF"
+            }
+          else{
+            bulb.src="bulboff.jpg" 
+                btn.textContent="TURN ON"
+           }
+        }
+    </script>
+</body>
+</html>
